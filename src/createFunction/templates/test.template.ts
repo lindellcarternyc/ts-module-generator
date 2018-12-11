@@ -28,7 +28,7 @@ const parseReturnTypes = (returnTypes: string[]): string => {
 const testTemplate = (params: CreateFunctionParameters): string => {
   return `import ${params.functionName} from './${params.functionName}'
 
-describe('#${params.functionName}, () => {
+describe('#${params.functionName}', () => {
   it('should return ${parseReturnTypes(params.returnTypes)}', () => {
     expect(true).toBe(true)
   })

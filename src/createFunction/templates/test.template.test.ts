@@ -12,7 +12,7 @@ describe('testTemplate', () => {
 
     const expected = `import functionName from './functionName'
 
-describe('#functionName, () => {
+describe('#functionName', () => {
   it('should return a string', () => {
     expect(true).toBe(true)
   })
