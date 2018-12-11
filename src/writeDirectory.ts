@@ -37,13 +37,13 @@ const writeDirectory = async (params: {
 
         info = {
           name: params.directoryName,
-          path: made,
+          path: dirpath,
           files
         }
       } else {
         info = {
           name: params.directoryName,
-          path: made,
+          path: dirpath,
           files: { }
         }
       }
