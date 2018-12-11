@@ -1,0 +1,1 @@
+A small library for generating typescript modules
