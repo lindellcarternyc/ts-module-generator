@@ -1,5 +1,7 @@
 import inquirer from 'inquirer'
 
+import { Parameter } from '@Interfaces'
+
 import getTypes  from '../functionTypes'
 
 const getParameter = async (): Promise<Parameter> => {
