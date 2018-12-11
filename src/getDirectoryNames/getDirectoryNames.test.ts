@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import getDirectoryNames from './getDirectorNames'
+import getDirectoryNames from './getDirectoryNames'
 
 describe('getDirectoryNames', () => {
   const p = path.resolve(process.cwd(), 'testDir')
@@ -12,6 +12,6 @@ describe('getDirectoryNames', () => {
 
   it('should return a list of the directories in test dir', async () => {
     const actual = await getDirectoryNames('testDir')
-    expect(actual).toEqual(directories)
+    expect(actual).toMatchObject(directories)
   })
 })
