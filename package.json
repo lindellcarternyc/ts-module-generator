@@ -4,8 +4,10 @@
   "description": "A generator module for create typescript modules",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config jestconfig.json --verbose",
-    "watch:test": "jest --config jestconfig.json --watchAll"
+    "test": "jest --runInBand --config jestconfig.json --verbose",
+    "watch:test": "jest --config jestconfig.json --watchAll",
+    "test:module": "node ./lib createFunction testDir",
+    "build": "rimraf ./lib && tsc"
   },
   "keywords": [],
   "author": "Lindell Carter <lindellcarternyc@gmail.com> (https://github.com/lindellcarternyc)",
@@ -13,14 +15,20 @@
   "devDependencies": {
     "@types/inquirer": "0.0.43",
     "@types/jest": "^23.3.10",
+    "@types/mkdirp": "^0.5.2",
     "@types/node": "^10.12.12",
+    "@types/rimraf": "^2.0.2",
     "jest": "^23.6.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
     "ts-jest": "^23.10.5",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
+    "commander": "^2.19.0",
+    "g": "^2.0.1",
     "inquirer": "^6.2.1"
   }
 }
