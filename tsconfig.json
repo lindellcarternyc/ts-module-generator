@@ -10,7 +10,8 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "strict": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "declarationDir": "./lib/types"
   },
   "exclude": [
     "node_modules",
