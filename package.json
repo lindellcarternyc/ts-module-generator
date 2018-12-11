@@ -2,14 +2,22 @@
   "name": "ts-generator",
   "version": "1.0.0",
   "description": "A generator module for create typescript modules",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lindellcarternyc/ts-module-generator.git"
+  },
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "jest --runInBand --config jestconfig.json --verbose",
     "watch:test": "jest --config jestconfig.json --watchAll",
     "test:module": "node ./lib createFunction testDir",
     "build": "rimraf ./lib && tsc",
     "lint": "tslint -p tsconfig.json",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "Lindell Carter <lindellcarternyc@gmail.com> (https://github.com/lindellcarternyc)",
