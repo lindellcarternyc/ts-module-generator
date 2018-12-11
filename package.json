@@ -1,5 +1,5 @@
 {
-  "name": "ts-generator",
+  "name": "lc-ts-generator",
   "version": "1.0.0",
   "description": "A generator module for create typescript modules",
   "main": "lib/index.js",
