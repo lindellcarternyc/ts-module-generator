@@ -1,4 +1,4 @@
-import { CreateFunctionParameters } from '../interfaces'
+import { CreateFunctionParameters } from '../../interfaces'
 import functionTemplate from './function.template'
 
 describe('function.template', () => {
@@ -15,7 +15,9 @@ describe('function.template', () => {
 
     const expected = `const functionName = (param1: number): number => {
   return null
-}`
+}
+
+export default functionName`
 
   const actual = functionTemplate(createFunctionParams)
   expect(actual).toBe(expected)
@@ -34,7 +36,9 @@ describe('function.template', () => {
 
     const expected = `const f1 = (p1: string | number): string | number => {
   return null
-}`
+}
+
+export default f1`
 
   const actual = functionTemplate(params)
   expect(actual).toBe(expected)

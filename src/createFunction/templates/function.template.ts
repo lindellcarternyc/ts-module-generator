@@ -11,7 +11,9 @@ const functionTemplate = (params: CreateFunctionParameters): string => {
   const parsedParameters = parseFunctionParameters(params.functionParameters)
   return `const ${params.functionName} = (${parsedParameters}): ${joinTypes(params.returnTypes)} => {
   return null
-}`
+}
+
+export default ${params.functionName}`
 }
 
 export default functionTemplate

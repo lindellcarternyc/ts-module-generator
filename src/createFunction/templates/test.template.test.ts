@@ -1,4 +1,4 @@
-import { CreateFunctionParameters } from '../interfaces'
+import { CreateFunctionParameters } from '../../interfaces'
 import testTemplate from './test.template'
 
 describe('testTemplate', () => {
