@@ -1,8 +1,1 @@
-export const SupportedTypes = [
-  'number',
-  'string',
-  'boolean',
-  'undefined',
-  'RegExp',
-  'function'
-]
+export const SupportedTypes = ['number', 'string', 'boolean', 'undefined', 'RegExp', 'function']

@@ -5,14 +5,12 @@ const selectModule = async (moduleNames: string[]): Promise<string> => {
     name: 'moduleName',
     type: 'list',
     choices: moduleNames,
-    message: 'Please select a module name...'
+    message: 'Please select a module name...',
   }
 
-  return inquirer
-    .prompt<{moduleName: string}>([selectNameQuestion])
-    .then(({ moduleName }) => {
-      return moduleName
-    })
+  return inquirer.prompt<{ moduleName: string }>([selectNameQuestion]).then(({ moduleName }) => {
+    return moduleName
+  })
 }
 
 export default selectModule

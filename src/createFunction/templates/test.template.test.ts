@@ -7,7 +7,7 @@ describe('testTemplate', () => {
       moduleName: '',
       functionName: 'functionName',
       functionParameters: [],
-      returnTypes: ['string']
+      returnTypes: ['string'],
     }
 
     const expected = `import functionName from './functionName'
@@ -17,7 +17,7 @@ describe('#functionName', () => {
     expect(true).toBe(true)
   })
 })`
-  const actual = testTemplate(params)
-  expect(actual).toBe(expected)
+    const actual = testTemplate(params)
+    expect(actual).toBe(expected)
   })
 })

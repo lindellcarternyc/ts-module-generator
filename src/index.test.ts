@@ -1,9 +1,9 @@
 import childProcess from 'child_process'
 
 describe('MODULE USAGE', () => {
-  it('should show the version of the module', (done) => {
+  it('should show the version of the module', done => {
     childProcess.exec('node ./lib -V', (err, stdout) => {
-      if ( err ) {
+      if (err) {
         done(err)
       }
       expect(stdout).toMatch('1.0.0')

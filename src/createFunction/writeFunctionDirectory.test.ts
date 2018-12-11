@@ -13,12 +13,12 @@ describe('writeFunctionDirectory', () => {
     const TestFunctionName = 'TestFunctionName'
     const TestRootDir = 'testDir'
     const TestRootDirectoryPath = path.resolve(process.cwd(), TestRootDir, TestModuleName)
-    
+
     const functionParams: CreateFunctionParameters = {
       moduleName: TestModuleName,
       functionName: TestFunctionName,
       functionParameters: [],
-      returnTypes: ['undefined']
+      returnTypes: ['undefined'],
     }
 
     const templates = createTemplates(functionParams)
@@ -26,7 +26,7 @@ describe('writeFunctionDirectory', () => {
     const info = await writeFunctionDirectory({
       rootDirectory: TestRootDirectoryPath,
       functionName: TestFunctionName,
-      templates
+      templates,
     })
 
     const expectedPath = path.resolve(TestRootDirectoryPath, TestFunctionName)
@@ -36,17 +36,17 @@ describe('writeFunctionDirectory', () => {
       files: {
         [`${TestFunctionName}.ts`]: {
           name: `${TestFunctionName}.ts`,
-          path: path.resolve(expectedPath, `${TestFunctionName}.ts`)
+          path: path.resolve(expectedPath, `${TestFunctionName}.ts`),
         },
         [`${TestFunctionName}.test.ts`]: {
           name: `${TestFunctionName}.test.ts`,
-          path: path.resolve(expectedPath, `${TestFunctionName}.test.ts`)
+          path: path.resolve(expectedPath, `${TestFunctionName}.test.ts`),
         },
         'index.ts': {
           name: 'index.ts',
-          path: path.resolve(expectedPath, 'index.ts')
-        }
-      }
+          path: path.resolve(expectedPath, 'index.ts'),
+        },
+      },
     }
 
     expect(info).toEqual(expectedInfo)

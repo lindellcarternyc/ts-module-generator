@@ -11,6 +11,4 @@ const generateFunction = async (rootDir: string): Promise<DirectoryInfo> => {
   return info
 }
 
-export {
-  generateFunction
-}
+export { generateFunction }

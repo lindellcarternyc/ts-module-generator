@@ -13,9 +13,11 @@ describe('writeFile', () => {
       const files = fs.readdirSync(dirPath)
       expect(files.includes('testFile.ts'))
       rimraf(filepath, err => {
-        if ( err ) { throw err }
+        if (err) {
+          throw err
+        }
       })
-    } catch ( err ) {
+    } catch (err) {
       throw err
     }
   })

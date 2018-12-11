@@ -15,7 +15,7 @@ describe('createFunction', () => {
         expect(typeof parameter.parameterName).toBe('string')
         expect(parameter.parameterTypes).toHaveProperty('length')
       })
-    } catch ( err ) {
+    } catch (err) {
       expect(err.message).toMatch('FUNCTION EXISTS')
     }
   }, 30000)

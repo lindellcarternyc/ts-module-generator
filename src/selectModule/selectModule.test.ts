@@ -4,7 +4,7 @@ import selectModule from './selectModule'
 
 describe('selectModule', () => {
   let moduleNames: string[] = []
-  beforeAll(async () => { 
+  beforeAll(async () => {
     moduleNames = await getDirectoryNames('testDir')
   })
   it('should wait for user to select module name', async () => {

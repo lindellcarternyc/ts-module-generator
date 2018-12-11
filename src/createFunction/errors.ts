@@ -3,6 +3,4 @@ const functionExistsError = (functionName: string) => {
   return new Error(message)
 }
 
-export {
-  functionExistsError
-}
+export { functionExistsError }

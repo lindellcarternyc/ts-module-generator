@@ -13,7 +13,7 @@ const createFunction = async (rootDir: string, moduleName: string): Promise<Dire
   const info: DirectoryInfo = await writeFunctionDirectory({
     templates,
     functionName: createFunctionParameters.functionName,
-    rootDirectory: path.resolve(rootDir, moduleName)
+    rootDirectory: path.resolve(rootDir, moduleName),
   })
 
   return info

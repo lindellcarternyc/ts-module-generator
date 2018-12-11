@@ -10,13 +10,12 @@ describe('writeDirectory', () => {
   const TestRootDir = 'testDir'
   const TestDirectoryName = 'moduleName'
   const TestDir = path.resolve(process.cwd(), TestRootDir, TestDirectoryName)
-  
-  
+
   it('should create an empty directory', async () => {
     try {
       const directoryInfo: DirectoryInfo = await writeDirectory({
         rootDirectory: TestRootDir,
-        directoryName: TestDirectoryName
+        directoryName: TestDirectoryName,
       })
       const exists = fs.existsSync(TestDir)
       const numFiles = fs.readdirSync(TestDir).length
@@ -36,10 +35,12 @@ describe('writeDirectory', () => {
     const info: DirectoryInfo = await writeDirectory({
       rootDirectory: TestRootDir,
       directoryName: TestDirectoryName,
-      files: [{
-        name: 'testFile.txt',
-        data: 'this is test data'
-      }]
+      files: [
+        {
+          name: 'testFile.txt',
+          data: 'this is test data',
+        },
+      ],
     })
 
     const exists = fs.existsSync(info.path)
@@ -54,9 +55,9 @@ describe('writeDirectory', () => {
       files: {
         'testFile.txt': {
           name: 'testFile.txt',
-          path: path.resolve(TestDir, 'testFile.txt')
-        }
-      }
+          path: path.resolve(TestDir, 'testFile.txt'),
+        },
+      },
     })
     rimraf.sync(TestDir)
   })

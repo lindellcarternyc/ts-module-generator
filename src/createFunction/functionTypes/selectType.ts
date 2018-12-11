@@ -7,13 +7,13 @@ const selectType = async (selectedTypes: string[] = []): Promise<string[]> => {
     type: 'list',
     message: 'Please select a type',
     choices: SupportedTypes,
-    name: 'selectedType'
+    name: 'selectedType',
   }
 
   const addAnotherTypeQuestion = {
     type: 'confirm',
     message: 'Add another type?',
-    name: 'addType'
+    name: 'addType',
   }
 
   interface SelectTypeAnswers {
@@ -21,17 +21,14 @@ const selectType = async (selectedTypes: string[] = []): Promise<string[]> => {
     addType: boolean
   }
 
-  return inquirer.prompt<SelectTypeAnswers>([
-    selectTypeQuestion, addAnotherTypeQuestion
-  ])
-    .then( async ({ selectedType, addType }) => {
-      const updatedTypes = selectedTypes.includes(selectedType)
-        ? selectedTypes
-        : selectedTypes.concat([selectedType])
-      if ( addType ) {
+  return inquirer
+    .prompt<SelectTypeAnswers>([selectTypeQuestion, addAnotherTypeQuestion])
+    .then(async ({ selectedType, addType }) => {
+      const updatedTypes = selectedTypes.includes(selectedType) ? selectedTypes : selectedTypes.concat([selectedType])
+      if (addType) {
         const types = await selectType(updatedTypes)
         return types
-      } 
+      }
       return updatedTypes
     })
 }

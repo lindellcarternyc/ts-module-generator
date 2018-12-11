@@ -12,7 +12,7 @@ describe('createTemplates', () => {
       moduleName: 'moduleName',
       functionName: 'funcName',
       functionParameters: [],
-      returnTypes: ['string']
+      returnTypes: ['string'],
     }
 
     const expectedFTemplate = fTemplate(params)
@@ -23,7 +23,5 @@ describe('createTemplates', () => {
     expect(actual.functionTemplate).toBe(expectedFTemplate)
     expect(actual.indexTemplate).toBe(expectedITemplate)
     expect(actual.testTemplate).toBe(expectedTTemplate)
-    
-
   })
 })

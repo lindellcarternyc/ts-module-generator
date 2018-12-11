@@ -22,7 +22,7 @@ const getCreateFunctionInput = async (rootDir: string, moduleName: string): Prom
     moduleName,
     functionName,
     returnTypes,
-    functionParameters
+    functionParameters,
   }
 }
 

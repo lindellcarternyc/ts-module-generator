@@ -2,21 +2,21 @@ import { CreateFunctionParameters } from '@Interfaces'
 
 const parseReturnTypes = (returnTypes: string[]): string => {
   const withPrefixes = returnTypes.map(returnType => {
-    if ( returnType.match(/^[aeiou]/i) ) {
+    if (returnType.match(/^[aeiou]/i)) {
       return 'an ' + returnType
     }
     return 'a ' + returnType
   })
 
-  if ( withPrefixes.length === 1 ) {
+  if (withPrefixes.length === 1) {
     return withPrefixes[0]
-  } else if ( withPrefixes.length === 2 ) {
+  } else if (withPrefixes.length === 2) {
     return withPrefixes.join(' or ')
   } else {
     return withPrefixes.reduce<string>((res, str, idx) => {
-      if ( idx === 0 ) {
+      if (idx === 0) {
         return str
-      } else if ( idx === withPrefixes.length - 1 ) {
+      } else if (idx === withPrefixes.length - 1) {
         return res + ', or' + str
       } else {
         return res + ', '
