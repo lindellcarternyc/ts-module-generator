@@ -1,6 +1,4 @@
 import childProcess from 'child_process'
-import fs from 'fs'
-import path from 'path'
 
 describe('MODULE USAGE', () => {
   it('should show the version of the module', (done) => {
