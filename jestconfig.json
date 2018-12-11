@@ -4,6 +4,6 @@
   },
   "testRegex": "(\\.|/)test\\.ts$",
   "moduleFileExtensions": [
-    "ts"
+    "ts", "js"
   ]
 }
