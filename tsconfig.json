@@ -12,14 +12,6 @@
     "strict": true,
     "rootDir": "src",
     "baseUrl": "src",
-    "paths": {
-      "@Interfaces": [
-        "interfaces"
-      ],
-      "@Interfaces/*": [
-        "interfaces/*"
-      ]
-    }
   },
   "exclude": [
     "node_modules",
