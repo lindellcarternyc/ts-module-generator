@@ -1,11 +1,13 @@
+import { TypeName } from './Types'
+
 export interface Parameter {
   parameterName: string
-  parameterTypes: string[]
+  parameterTypes: TypeName[]
 }
 
 export interface CreateFunctionParameters {
   moduleName: string
   functionName: string
-  returnTypes: string[]
+  returnTypes: TypeName[]
   functionParameters: Parameter[]
 }
