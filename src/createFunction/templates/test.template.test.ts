@@ -14,7 +14,7 @@ describe('testTemplate', () => {
 
 describe('#functionName', () => {
   it('should return a string', () => {
-    expect(true).toBe(true)
+    expect('').toBe('')
   })
 })`
     const actual = testTemplate(params)

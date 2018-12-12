@@ -1,4 +1,5 @@
 import { CreateFunctionParameters } from '../../interfaces'
+import defaultTypes from '../functionTypes/defaultTypes'
 
 const parseReturnTypes = (returnTypes: string[]): string => {
   const withPrefixes = returnTypes.map(returnType => {
@@ -26,11 +27,12 @@ const parseReturnTypes = (returnTypes: string[]): string => {
 }
 
 const testTemplate = (params: CreateFunctionParameters): string => {
+  const defaultValue = defaultTypes(params.returnTypes[0])
   return `import ${params.functionName} from './${params.functionName}'
 
 describe('#${params.functionName}', () => {
   it('should return ${parseReturnTypes(params.returnTypes)}', () => {
-    expect(true).toBe(true)
+    expect(${defaultValue}).toBe(${defaultValue})
   })
 })`
 }
