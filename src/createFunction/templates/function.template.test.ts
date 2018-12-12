@@ -16,7 +16,7 @@ describe('function.template', () => {
     }
 
     const expected = `const functionName = (param1: number): number => {
-  return null
+  return 0
 }
 
 export default functionName`
@@ -39,7 +39,7 @@ export default functionName`
     }
 
     const expected = `const f1 = (p1: string | number): string | number => {
-  return null
+  return ''
 }
 
 export default f1`
