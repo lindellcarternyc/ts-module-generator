@@ -50,6 +50,6 @@ describe('writeFunctionDirectory', () => {
     }
 
     expect(info).toEqual(expectedInfo)
-    rimraf.sync(expectedPath)
+    rimraf.sync(TestRootDirectoryPath)
   })
 })
