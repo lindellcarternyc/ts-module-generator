@@ -1,4 +1,4 @@
-import { DirectoryInfo } from '@Interfaces/DirectoryInfo'
+import { DirectoryInfo } from '../interfaces/DirectoryInfo'
 
 import writeDirectory from '../writeDirectory'
 

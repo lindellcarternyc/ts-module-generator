@@ -1,6 +1,6 @@
 import path from 'path'
 
-import { DirectoryInfo } from '@Interfaces/DirectoryInfo'
+import { DirectoryInfo } from '../interfaces/DirectoryInfo'
 
 import getCreateFunctionInput from './getCreateFunctionInput'
 import createTemplates from './templates/createTemplates'
