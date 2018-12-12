@@ -10,3 +10,7 @@ export const TypeDefaults: {[type in TypeName]: string} = {
   'string': '\'\'',
   'RegExp': 'new RegExp(\'hello\')'
 }
+
+export const isTypeName = (name: string): name is TypeName => {
+  return Object.keys(TypeDefaults).includes(name)
+}
