@@ -1,4 +1,4 @@
-import { DirectoryInfo } from '@Interfaces/DirectoryInfo'
+import { DirectoryInfo } from './interfaces/DirectoryInfo'
 
 import createFunction from './createFunction'
 import getDirectoryNames from './getDirectoryNames'
