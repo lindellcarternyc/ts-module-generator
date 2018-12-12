@@ -20,7 +20,8 @@
     "prepare": "npm run build",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm run test && npm run lint"
   },
   "keywords": [],
   "author": "Lindell Carter <lindellcarternyc@gmail.com> (https://github.com/lindellcarternyc)",
