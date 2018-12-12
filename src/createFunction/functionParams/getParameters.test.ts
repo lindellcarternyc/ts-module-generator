@@ -8,5 +8,5 @@ describe('getParameters', () => {
       expect(typeof parameterName).toBe('string')
       expect(parameterTypes).toHaveProperty('length')
     })
-  })
+  }, 30000)
 })

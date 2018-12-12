@@ -1,6 +1,6 @@
 import inquirer from 'inquirer'
 
-import { Parameter } from '@Interfaces'
+import { Parameter } from '../../interfaces'
 
 import getTypes from '../functionTypes'
 
