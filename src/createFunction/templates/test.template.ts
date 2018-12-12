@@ -1,4 +1,4 @@
-import { CreateFunctionParameters } from '@Interfaces'
+import { CreateFunctionParameters } from '../../interfaces'
 
 const parseReturnTypes = (returnTypes: string[]): string => {
   const withPrefixes = returnTypes.map(returnType => {

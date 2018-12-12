@@ -1,4 +1,4 @@
-import { CreateFunctionParameters } from '@Interfaces'
+import { CreateFunctionParameters } from '../../interfaces'
 
 import fTemplate from './function.template'
 import iTemplate from './index.template'

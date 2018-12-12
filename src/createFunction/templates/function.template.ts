@@ -1,4 +1,4 @@
-import { CreateFunctionParameters, Parameter } from '@Interfaces'
+import { CreateFunctionParameters, Parameter } from '../../interfaces'
 
 const joinTypes = (types: string[]): string => types.join(' | ')
 
