@@ -20,10 +20,10 @@ describe('defaultTypes', () => {
   })
 
   it('should return an empty string for string type', () => {
-    expect(defaultTypes('string')).toBe('\'\'')
+    expect(defaultTypes('string')).toBe("''")
   })
 
   it('should create a dummy regexp string for a regexp type', () => {
-    expect(defaultTypes('RegExp')).toBe('new RegExp(\'hello\')')
+    expect(defaultTypes('RegExp')).toBe("new RegExp('hello')")
   })
 })

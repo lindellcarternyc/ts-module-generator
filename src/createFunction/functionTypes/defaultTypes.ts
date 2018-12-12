@@ -5,4 +5,3 @@ const defaultType = (type: TypeName): string => {
 }
 
 export default defaultType
-

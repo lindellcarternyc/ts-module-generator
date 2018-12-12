@@ -27,8 +27,8 @@ const selectType = async (selectedTypes: TypeName[] = []): Promise<TypeName[]> =
     .prompt<SelectTypeAnswers>([selectTypeQuestion, addAnotherTypeQuestion])
     .then(async ({ selectedType, addType }) => {
       let updatedTypes: TypeName[] = [...selectedTypes]
-      if ( isTypeName(selectedType) ) {
-        if ( !updatedTypes.includes(selectedType) ) {
+      if (isTypeName(selectedType)) {
+        if (!updatedTypes.includes(selectedType)) {
           updatedTypes = updatedTypes.concat(selectedType)
         }
       }
