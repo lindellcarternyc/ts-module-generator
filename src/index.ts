@@ -2,7 +2,7 @@ import program from 'commander'
 
 import { generateFunction } from './main'
 
-program.version('1.1.0').description('Generators for Typescript built on node!')
+program.version('1.1.1').description('Generators for Typescript built on node!')
 
 program
   .command('createFunction [rootDir]')

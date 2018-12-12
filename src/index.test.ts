@@ -6,7 +6,7 @@ describe('MODULE USAGE', () => {
       if (err) {
         done(err)
       }
-      expect(stdout).toMatch('1.1.0')
+      expect(stdout).toMatch('1.1.1')
       done()
     })
   }, 30000)
