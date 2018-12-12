@@ -1,7 +1,7 @@
 import mkdirp from 'mkdirp'
 import path from 'path'
 
-import { DirectoryInfo } from '@Interfaces/DirectoryInfo'
+import { DirectoryInfo } from './interfaces/DirectoryInfo'
 
 import writeFile from './writeFile'
 
